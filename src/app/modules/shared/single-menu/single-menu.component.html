@@ -1,0 +1,32 @@
+<div class="box"
+     [class.flex-reverse]="isRevers"
+  >
+
+  <div class="sub-box wow animate__animated animate__fadeInLeft">
+    <div class="title-price">
+      <h3 class="sub-title nj-h3">{{ singleMenu?.title }} </h3>
+      <p class="number nj-greenText nj-h3 nj-textCenter">
+        {{ singleMenu?.price
+        }}<span class="currency">{{ singleMenu?.currency }}</span>
+      </p>
+    </div>
+    <p class="text nj-p">
+      {{ singleMenu?.firstText }}
+      <span class="nj-salatText">{{ singleMenu?.greenText }}</span>
+      <br />
+      {{ singleMenu?.description }}
+    </p>
+    <div class="btn-box">
+      <app-main-button class="btn-middle"
+        [text]="'Купити'"
+        (click)="openPopup()"
+      ></app-main-button>
+    </div>
+  </div>
+
+
+  <div class="img wow animate__animated animate__fadeInRight">
+    <app-swiper-carousel [singleMenu]="singleMenu"></app-swiper-carousel>
+  </div>
+
+</div>

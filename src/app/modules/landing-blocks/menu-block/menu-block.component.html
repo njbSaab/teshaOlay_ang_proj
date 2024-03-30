@@ -1,0 +1,65 @@
+<section class="menu-block pd-section">
+  <div class="nj-container">
+    <h2 class="title nj-h1 nj-textCenter pd-titleSmall animate__animated animate__fadeInDown wow">Діє спеціальна <span class="nj-redText">пропозиція</span></h2>
+    <div class="box">
+      <div class="item" *ngFor="let item of menu">
+        <app-card-food [cardData]="item"> </app-card-food>
+      </div>
+
+      <div class="box-text accordion-hide" *ngFor="let item of accordeonData">
+        <app-accordion [AccordionItem]="item"></app-accordion>
+      </div>
+
+    </div>
+
+    <div class="special-offer pd-pb50">
+      <h5 class="nj-h2 wow animate__animated animate__pulse animate__infinite">
+        За спеціальною ціною <span class="nj-redText">197₴</span>
+      </h5>
+      <p class="nj-p text wow animate__animated animate__fadeInLeft animate__delay-1s">Ви отримаєте покрокову інструкцію приготування 7 сніданків, 7 обідів і 7 вечерь, з переліком та кількістю інгрідієнтів, описом і прорахуванням часу, а також посилання на відео-рецепт кожної страви. Додаткова економія 100грн.</p>
+
+      <div class="btn-box btn-box-offer">
+        <app-main-button class="btn-middle btn-offer"
+                         [text]="'Замовити все'"
+                         (click)="openPopup()"
+        ></app-main-button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!--<section class="menu-block pd-section">-->
+<!--  <div class="nj-container">-->
+<!--    <h2 class="title nj-h1 nj-textCenter pd-titleSmall animate__animated animate__fadeInDown wow">Діє спеціальна <span class="nj-redText">пропозиція</span></h2>-->
+<!--    <div class="box">-->
+<!--      <div class="item" *ngFor="let item of menu">-->
+<!--        <app-card-food [cardData]="item"></app-card-food>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="special-offer pd-pb50">-->
+<!--      <h5 class="nj-h2 wow animate__animated animate__pulse animate__infinite">-->
+<!--        За спеціальною ціною <span class="nj-redText">197₴</span>-->
+<!--      </h5>-->
+<!--      <p class="nj-p text wow animate__animated animate__fadeInLeft animate__delay-1s">Ви отримаєте покрокову інструкцію приготування 7 сніданків, 7 обідів і 7 вечерь, з переліком та кількістю інгрідієнтів, описом і прорахуванням часу, а також посилання на відео-рецепт кожної страви. Додаткова економія 100грн.</p>-->
+
+<!--      <div class="btn-box btn-box-offer">-->
+<!--        <app-main-button class="btn-middle btn-offer"-->
+<!--                         [text]="'Замовити все'"-->
+<!--                         (click)="openPopup()"-->
+<!--        ></app-main-button>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->

@@ -1,0 +1,20 @@
+<div class="block-swiper">
+  <swiper
+    #swiperComment
+    [spaceBetween]="0"
+    [navigation]="true"
+    [autoplay]="true"
+    [centeredSlides]="false"
+    [pagination]="{ clickable: true }"
+    (slideChange)="onSwiperSlideChange()"
+    [slidesPerView]="slidesPerView"
+    [slidesPerGroup]="slidesPerGroup"
+  >
+    <ng-template swiperSlide *ngFor="let item of content">
+      <app-comments class="slider-component"
+                    [commentData]="item"
+      ></app-comments>
+    </ng-template>
+  </swiper>
+
+</div>

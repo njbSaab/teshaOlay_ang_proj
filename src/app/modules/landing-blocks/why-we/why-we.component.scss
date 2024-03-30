@@ -1,0 +1,39 @@
+@import "../../shared/colors.scss";
+
+.why-we {
+  background: $background;
+  padding-bottom: 100px;
+  @media (max-width: 600px) {
+    padding-bottom: 50px;
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .wrapper-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 1024px) {
+      justify-content: inherit;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .box{
+      flex: 0 1 33%;
+      opacity: .8;
+      transition: .3s ease;
+      @media (max-width: 600px){
+        width: 100%;
+      }
+    }
+    .box:hover{
+      opacity: 1;
+      transition: .3s ease;
+      background: $btnColor;
+    }
+  }
+}

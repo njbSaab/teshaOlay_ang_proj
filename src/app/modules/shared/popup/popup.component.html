@@ -1,0 +1,103 @@
+<div class="popup-wrapper" [formGroup]="form">
+  <div class="top-title-box">
+    <h1 mat-dialog-title class="nj-h4">
+      Заповніть форму для <span class="nj-greenText">замовлення</span>
+    </h1>
+    <button
+      mat-icon-button
+      matTooltip="Warn"
+      color="warn"
+      aria-label="Example icon-button with a heart icon"
+      class="btn-cancel"
+      mat-dialog-close
+    >
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+  <div class="mat-dialog-content">
+    <div class="profile-box">
+      <mat-form-field appearance="outline">
+        <mat-label>Ведіть прізвище</mat-label>
+        <input
+          class="nj-p"
+          matInput
+          placeholder="Українка"
+          formControlName="surname"
+        />
+        <mat-icon matSuffix>edit</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label class="">Ведіть ім'я</mat-label>
+        <input
+          class="nj-p"
+          matInput
+          placeholder="Леся"
+          formControlName="name"
+          required
+        />
+        <mat-icon matSuffix>edit</mat-icon>
+
+        <mat-error *ngIf="form?.controls?.name?.errors?.['required']"
+          >Не вказане ім’я
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="contacts-box">
+      <mat-form-field appearance="outline">
+        <mat-label>Ведіть Ваш Телефон</mat-label>
+        <input
+          class="nj-p"
+          matInput
+          placeholder="093-333-33-33"
+          formControlName="phone"
+          mask="(000) 000-00-00"
+          required
+        />
+
+        <mat-icon matSuffix>phone</mat-icon>
+
+        <mat-error *ngIf="form?.controls?.phone?.errors?.['required']"
+          >
+
+        </mat-error>
+
+        <mat-error *ngIf="form?.controls?.phone?.errors?.['mask']"
+          >Не вірно вказаний телефон
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ведіть Ваш email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" />
+        <mat-icon matSuffix>mail</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="menu-box">
+      <mat-form-field>
+        <mat-label>Оберіть рецепт</mat-label>
+        <mat-select class="nj-p" multiple formControlName="order">
+          <mat-option
+            class="nj-p"
+            *ngFor="let recipe of recipesList"
+            [value]="recipe"
+            >{{ recipe }}</mat-option
+          >
+        </mat-select>
+
+        <mat-error *ngIf="form?.controls?.order?.errors?.['required']"
+          >Оберіть рецепт, який вам сподобався
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mat-dialog-actions">
+      <app-main-button
+        (click)="afterSubmitPopup()"
+        [text]="'Надіслати'"
+      ></app-main-button>
+    </div>
+  </div>
+</div>

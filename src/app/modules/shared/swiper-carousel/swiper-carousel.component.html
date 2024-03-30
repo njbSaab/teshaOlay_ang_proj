@@ -1,0 +1,34 @@
+<div class="swiper-box">
+  <swiper
+    #swiper1
+    [slidesPerView]="1"
+    [spaceBetween]="1"
+    [navigation]="true"
+    [autoplay]="true"
+    [pagination]="{ clickable: true }"
+    effect="flip"
+    (slideChange)="onSwiperSlideChange()"
+  >
+    <ng-template
+      swiperSlide
+      *ngFor="let image of singleMenu?.images; let i = index"
+    >
+      <div class="img">
+        <img [src]="image" alt="Slide" />
+      </div>
+    </ng-template>
+  </swiper>
+
+  <div class="box-arrows">
+
+    <span class="material-symbols-outlined"
+          [ngClass]="countSlider > 0 ? 'arrow-active' : ''"
+          (click)="onPrevClick()">
+      arrow_circle_left</span>
+    <span class="material-symbols-outlined"
+          [ngClass]="countSlider < arrLength - 1 ? 'arrow-active' : ''"
+          (click)="onNextClick()">
+      arrow_circle_right</span>
+
+  </div>
+</div>

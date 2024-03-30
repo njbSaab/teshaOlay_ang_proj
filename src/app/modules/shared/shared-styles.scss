@@ -1,0 +1,346 @@
+@import "~normalize.css";
+@import "colors";
+@import "fonts";
+@import "~swiper/swiper-bundle.css";
+@import "~animate.css/animate.css";
+
+
+.nj-h1 {
+  font-family: $font-large;
+  color: $mainColor;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      line-height: 135%;
+      @media (max-width: 1024px) {
+        font-size: 32px;
+        @media (max-width: 370px) {
+          font-size: 22px;
+        }
+      }
+    }
+
+}
+
+.nj-h2 {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: $mainColor;
+  @media (max-width: 1200px) {
+    font-size: 40px;
+    line-height: 150%;
+    @media (max-width: 1024px) {
+      font-size: 30px;
+          @media (max-width: 350px) {
+            font-size: 20px !important;
+          }
+    }
+  }
+}
+
+.nj-h3 {
+  font-family: $font-large;
+  color: $mainColor;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70%;
+  @media (max-width: 1200px) {
+    font-size: 30px;
+    line-height: 135%;
+    @media (max-width: 1024px) {
+      font-size: 28px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+        @media (max-width: 500px) {
+          font-size: 18px;
+          @media (max-width: 370px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nj-h4 {
+  font-family: $font-large;
+  color: $mainColor;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    @media (max-width: 500px) {
+      font-size: 15px;
+      @media (max-width: 370px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.nj-h5 {
+  font-family: $font-large;
+  color: $mainColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0;
+}
+
+.nj-greenText {
+  width: fit-content;
+  height: 120%;
+  border-radius: 12px;
+  padding: 8px;
+  background: $btnBg;
+  color: $btnColor;
+  @media (max-width: 450px){
+    padding: 5px;
+    @media (max-width: 350px) {
+      font-size: 24px !important;
+    }
+  }
+}
+.nj-redText {
+  width: fit-content;
+  height: 120%;
+  border-radius: 12px;
+  padding: 8px;
+  background: red;
+  color: $btnColor;
+}
+
+.nj-salatText {
+  width: fit-content;
+  padding: 6px;
+  border-radius: 6px;
+  background: $greenText;
+  color: $mainColor;
+  font-family: $font-large;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  @media (max-width: 500px) {
+    font-size: 18px;
+    @media (max-width: 370px) {
+      font-size: 18px;
+      @media (max-width: 370px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.nj-p {
+  font-size: 18px;
+  font-family: $font-small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: $pColor;
+  @media (max-width: 500px) {
+    font-size: 15px;
+    @media (max-width: 375px) {
+      font-size: 14px;
+      @media (max-width: 350px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.nj-textTransparent {
+  font-size: 18px;
+  font-family: $font-small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: $btnBg;
+  opacity: 0.6;
+}
+.nj-container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: 800px) {
+    padding: 0 10px;
+  }
+}
+.nj-container-fluid{
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: 1660px){
+    max-width: 1320px;
+    @media (max-width: 1440px){
+      max-width: 1240px;
+      @media (max-width: 800px) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+}
+.nj-titleSmall{
+  font-family: "Comfortaa", cursive;
+  color: #151414;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+.pd-title {
+  padding: 100px 0 50px;
+  @media (max-width: 768px) {
+    padding: 50px 0 30px;
+  }
+}
+.pd-titleSmall {
+  padding: 50px 0 50px;
+  @media (max-width: 768px) {
+    padding: 50px 0 30px;
+  }
+}
+.pd-pb30 {
+  padding-bottom: 30px;
+}
+.pd-pb50 {
+  padding-bottom: 50px;
+}
+.pd-pb100 {
+  padding-bottom: 100px;
+}
+.pd-pb150 {
+  padding-bottom: 150px;
+}
+.subColor {
+  color: $subColor;
+}
+.nj-textCenter {
+  text-align: center;
+}
+.nj-border {
+  border: 1px solid $cartBorder;
+  border-radius: 20px;
+}
+.nj-description {
+  color: $subColor;
+}
+
+.box-arrows {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+  cursor: pointer;
+  @media (max-width: 800px) {
+    padding-bottom: 35px;
+    @media (max-width: 600px) {
+      padding: 20px 0 !important;
+    }
+  }
+
+  .material-symbols-outlined {
+    font-size: 55px;
+    color: $btnBg;
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+
+    @media (max-width: 1024px) {
+      font-size: 60px;
+
+      @media (max-width: 767px) {
+        font-size: 50px;
+      }
+    }
+
+  }
+  .right {
+    transform: rotate(180deg);
+  }
+  .arrow-active {
+    transition: opacity 0.2s ease;
+    opacity: 1;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.material-symbols-outlined {
+   font-variation-settings:
+     'FILL' 0,
+     'wght' 400,
+     'GRAD' 0,
+     'opsz' 48
+ }
+
+
+//animation delay
+.delay-01s {
+  animation-delay: 0.1s;
+}
+.delay-02s {
+  animation-delay: 0.2s;
+}
+.delay-03s {
+  animation-delay: 0.3s;
+}
+.delay-04s {
+  animation-delay: 0.4s;
+}
+.delay-05s {
+  animation-delay: 0.5s;
+}
+.delay-06s {
+  animation-delay: 0.6s;
+}
+.delay-07s {
+  animation-delay: 0.7s;
+}
+.delay-08s {
+  animation-delay: 0.8s;
+}
+.delay-09s {
+  animation-delay: 0.9s;
+}
+.delay-13ms {
+  animation-delay: 1.3s;
+}
+.delay-15ms {
+  animation-delay: 1.5s;
+}
+.btn-box{
+  display: flex;
+  @media (max-width: 1024px) {
+    justify-content: center;
+    @media (max-width: 600px) {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 600px) {
+    .btn-middle{
+      width: 85%;
+      text-align: center;
+    }
+  }
+}
+
+

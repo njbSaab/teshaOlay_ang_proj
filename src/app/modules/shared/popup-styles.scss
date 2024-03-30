@@ -1,0 +1,296 @@
+@import "colors.scss";
+
+
+.popup-wrapper {
+  background: $btnColor;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  @media (max-width: 500px) {
+    padding: 10px 20px;
+    @media (max-width: 320px) {
+      padding: 5px 10px;
+    }
+  }
+  .top-title-box{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 30px;
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      padding: 0 0 30px;
+      @media (max-width: 320px) {
+        padding: 0 0 10px;
+      }
+    }
+    .btn-cancel {
+      margin-left: auto;
+    }
+    h1 {
+      flex: 1 1 auto;
+      text-align: center;
+      color: $mainColor;
+      font-family: $font-large;
+      font-weight: bolder;
+      font-size: 22px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 500px) {
+        font-size: 20px;
+        flex-wrap: wrap;
+        @media (max-width: 400px) {
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .mat-dialog-actions {
+    text-align: center;
+    font-size: 20px !important;
+    font-family: $font-large;
+    font-weight: bold;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
+    @media (max-width: 500px) {
+      padding-bottom: 10px;
+      width: 70%;
+    }
+  }
+  .mdc-list-item__primary-text {
+    color: $btnBg !important;
+    font-size: 20px !important;
+    font-family: $font-large !important;
+  }
+}
+
+//form
+//mat-form
+//change mat-input color & bg & fsz on focus
+.mat-mdc-form-field {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.cdk-global-overlay-wrapper {
+  @media (max-width: 320px) {
+    overflow: scroll;
+  }
+}
+.mat-mdc-form-field {
+  @media (max-width: 500px) {
+    padding-bottom: 0;
+  }
+}
+
+.mdc-text-field--focused:not(.mcd-text-field--disabled) .mdc-floating-label {
+  color: $btnColor !important;
+  background: $btnBg !important;
+  padding: 2.5px 10px;
+}
+
+//require *
+.mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
+  color: $greenOpacity;
+  font-size: 18px !important;
+  font-family: $font-large;
+  @media (max-width: 320px) {
+    font-size: 15px !important;
+    line-height: 20px;
+  }
+}
+
+// value color
+.mdc-text-field:not(.mcd-text-field--disabled) .mdc-text-field__input {
+  color: $mainColor;
+  font-size: 20px !important;
+  font-family: $font-large;
+  font-weight: bold;
+  @media (max-width: 320px) {
+    font-size: 18px !important;
+    line-height: 20px;
+  }
+}
+
+// placeholder color
+.mdc-text-field:not(.mcd-text-field--disabled)
+.mdc-text-field__input::placeholder {
+  color: $btnBg;
+}
+
+// caret color
+.mdc-text-field .mdc-text-field__input {
+  caret-color: $mainColor;
+}
+
+// border color & width
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+.mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+.mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+.mdc-notched-outline__trailing {
+  border-color: $greenText;
+  transition: all 0.3s ease;
+}
+
+.input-error {
+  // border color & width
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__leading,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__notch,
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__trailing {
+    border-color: red;
+    transition: all 0.3s ease;
+  }
+}
+
+//hover border
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+.mdc-notched-outline
+.mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+.mdc-notched-outline
+.mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+.mdc-notched-outline
+.mdc-notched-outline__trailing {
+  border-color: $btnBg;
+  transition: all 0.3s ease;
+}
+
+//focus border color
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused
+.mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused
+.mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused
+.mdc-notched-outline__trailing {
+  border-color: $btnBg;
+  transition: all 0.3s ease;
+}
+
+//multy form
+
+//select line
+.mdc-text-field--filled .mdc-line-ripple::after {
+  border-bottom: $btnBg;
+}
+//select menu
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: $greenText;
+  border-radius: 30px;
+}
+
+//select text active
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled)
+.mdc-list-item__primary-text {
+  color: $btnColor !important;
+}
+//select text panel
+.mat-mdc-select-panel-above .mat-mdc-select-panel {
+  //background: $greenText;
+}
+
+//text panel list
+.mat-mdc-option .mdc-list-item__primary-text {
+  font-size: 18px;
+  font-family: $font-large !important;
+  color: $btnBg;
+  font-weight: bold !important;
+}
+
+
+//checkbox
+.mat-pseudo-checkbox-full {
+  color: $btnBg;
+}
+
+//checkbox active
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-full,
+.mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-full {
+  background: $btnBg;
+}
+//checkbox checked
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-full::after,
+.mat-primary
+.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-full::after {
+  color: $btnColor;
+}
+
+//text main
+.mat-mdc-select-value {
+  font-size: 18px;
+  font-family: $font-large !important;
+  color: $mainColor;
+  font-weight: bold !important;
+}
+//text main svg
+.mat-mdc-select-arrow svg {
+  fill: $mainColor !important;
+}
+
+//invalid matFormField
+.mdc-text-field--invalid {
+  border-color: red!important;
+}
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):hover .mdc-line-ripple:before {
+  border-bottom-color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-line-ripple:after {
+  border-bottom-color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled).mdc-text-field--invalid+.mdc-text-field-helper-line .mdc-text-field-helper-text--validation-msg {
+  color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid .mdc-text-field__input {
+  caret-color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__icon--trailing {
+  color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-line-ripple:before {
+  border-bottom-color: var(--mdc-theme-error, #f44336)
+}
+
+.mat-mdc-form-field-error {
+  color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: var(--mdc-theme-error, #f44336)
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,.mdc-text-field--invalid:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,.mdc-text-field--invalid:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+  border-color: var(--mdc-theme-error, #f44336)
+}
+

@@ -1,0 +1,247 @@
+@import "../../shared/colors.scss";
+
+.footer {
+  background: $background;
+  padding: 100px 70px;
+
+  @media (max-width: 1024px) {
+    padding: 60px 20px;
+    @media (max-width: 600px){
+      padding: 0px 0px 20px;
+    }
+  }
+  .footer-box {
+    display: flex;
+    @media (max-width: 767px) {
+      gap: 30px;
+      @media (max-width: 600px) {
+        gap: 20px;
+        align-items: center;
+      }
+    }
+    .logo-column {
+      flex: 0 1 30%;
+      padding-left: 10%;
+      @media (max-width: 1200px) {
+        padding-left: 0;
+        flex: 0 1 25%;
+        @media (max-width: 1024px) {
+          flex: 0 1 20%;
+          display: flex;
+          padding-top: 20px;
+          justify-content: flex-end;
+          @media (max-width: 500px) {
+            padding-top: 30px;
+          }
+        }
+      }
+      .box-logo {
+        .logo {
+          width: 92px;
+          display: block;
+
+            @media (max-width: 600px) {
+              width: 60px;
+            }
+        }
+      }
+    }
+
+    .box-information {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-evenly;
+      @media (max-width: 1200px) {
+        justify-content: space-between;
+        @media (max-width: 1024px){
+          align-items: center;
+          justify-content: space-around;
+          @media (max-width: 700px){
+            justify-content: initial;
+          }
+        }
+      }
+
+        p {
+          font-size: 15px;
+          color: $textTransparent;
+          @media (max-width: 700px){
+            font-size: 12px;
+            justify-content: flex-end;
+          }
+        }
+      .blocks-column{
+        @media (max-width: 700px){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1 1 50%;
+        }
+
+        .links a:hover{
+          p{
+            color: #369c50;
+          }
+          svg{
+            fill: #369c50;;
+          }
+        }
+      }
+    }
+
+    .contact-column{
+      a {
+        .youtube{
+          @media (max-width: 500px) {
+            max-width: 35px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+.title {
+  padding-bottom: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 15px;
+      @media (max-width: 700px) {
+       opacity: 0;
+      }
+    }
+
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $textTransparent;
+  @media (max-width: 600px){
+    align-items: center;
+  }
+
+  .row{
+    height: 30px;
+    width: fit-content;
+    color: $textTransparent;
+  }
+
+  a {
+    color: $textTransparent;
+  }
+
+  svg{
+    fill: $textTransparent;
+    transition: .5s ease;
+    height: 30px;
+    width: 30px;
+    path{
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  svg:hover{
+    transition: .5s ease;
+    fill: $btnBg !important;
+  }
+
+  .row-contact {
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+    width: 100%;
+    @media (max-width: 700px){
+      gap: 5px;
+    }
+    .hv-class{
+      transition: .5s ease;
+    }
+    .hv-class:hover{
+      transition: .5s ease;
+      color: $btnBg !important;
+    }
+
+
+    span{
+      color: $textTransparent !important;
+      width: 100%;
+      @media (max-width: 500px){
+        text-align: center;
+        max-width: 50px;
+        margin: 0 auto;
+        }
+      }
+    a {
+      border-bottom: 2px solid transparent;
+      transition: .5s ease;
+      width: fit-content;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+
+}
+
+
+
+.bottom {
+  background-image: url("~src/assets/images/footer-bg.svg");
+  height: 60px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $btnColor;
+  }
+}
+
+.opacity-link{
+  @media (max-width: 700px){
+    display: none;
+  }
+}
+
+.links-box::before {
+  content: '';
+  bottom: 0;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: $btnBg;
+  transition: .2s;
+  transform: scaleX(0);
+}
+.links-box{
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+
+}
+.links-box:hover:before{
+  transition: .5s ease;
+  width: 100%;
+  transform: scaleX(1);
+  @media (max-width: 600px){
+    width: 0;
+  }
+}
+
+.my-hover:hover{
+  color: $btnBg;
+}
+
+.icon{
+  width: 30px !important;
+  height: 30px !important;
+  padding-right: 10px;
+  @media (max-width: 700px){
+    display: inline-block;
+    margin-left: auto;
+  }
+
+}

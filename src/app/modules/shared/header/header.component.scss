@@ -1,0 +1,144 @@
+@import "../colors.scss";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px 0;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  background: $btnColor;
+  transition: .2s ease-in-out;
+  transform: translateY(-25%);
+  @media (max-width: 1024px) {
+    padding: 60px 40px 20px;
+    @media (max-width: 700px){
+      gap: 50px;
+      @media (max-width: 600px){
+        padding: 30px 10px 10px;
+      }
+    }
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    min-height: 100%;
+    max-width: 100%;
+
+      @media (max-width: 600px) {
+        width: 50px;
+        height: 50px;
+      }
+  }
+  .menu-btn {
+    display: none;
+
+    @media (max-width: 600px) {
+      width: 80px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      z-index: 99;
+      span {
+        width: 33px;
+        height: 3px;
+        background: $mainColor;
+        display: block;
+        border-radius: 6px;
+        transition: 0.4s ease-in-out;
+        @media (max-width: 320px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+  .menu-btn span:nth-child(2) {
+    margin: 4px 0;
+  }
+  .menu-btn-Class span:nth-child(2) {
+    display: none;
+  }
+  .menu-btn-Class span:nth-child(1) {
+    transform: rotate(225deg);
+    background: $btnBg;
+  }
+  .menu-btn-Class span:nth-child(3) {
+    transform: rotate(-225deg);
+    margin-top: -3px;
+    background: $btnBg;
+  }
+
+  .header-nav {
+    display: flex;
+    text-align: end;
+    flex: 0 1 550px;
+
+    @media (max-width: 600px) {
+      position: absolute;
+      right: 0px;
+      top: 100px;
+      width: 100%;
+      height: 100%;
+      background: $greenText;
+      flex-direction: column;
+      align-items: start;
+      transition: 0.4s ease-in-out;
+      transform: translateY(-1000%);
+      z-index: 98;
+      a {
+        padding: 10px 0;
+        border-bottom: 1px solid $cartBorder;
+      }
+      .btn-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto;
+      border-bottom: 2px solid transparent;
+      transition: .5s ease;
+      @media (max-width: 600px) {
+        font-size: 20px;
+      }
+
+    }
+    .link:hover{
+      transition: .5s ease;
+      color: $btnBg;
+      border-bottom: 2px solid $btnBg;
+      font-weight: bold;
+      width: 150%;
+      @media (max-width: 600px){
+        width: initial;
+      }
+    }
+    .link:active{
+      transition: .5s ease;
+      color: $greenOpacity;
+    }
+  }
+  .menuClass {
+    transform: translateX(0);
+    transition: 0.4s ease-in-out;
+    height: 120vh;
+  }
+}
+.headerGreen {
+  background: $greenText;
+  transition: all 0.5s ease-in;
+}
+.header-none{
+  transform: translateY(-100%);
+  transition: transform .5s ease;
+}

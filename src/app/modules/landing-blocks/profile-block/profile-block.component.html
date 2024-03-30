@@ -1,0 +1,32 @@
+<section class="profile pd-pb100" id="profile">
+  <div class="nj-container">
+    <div class="box">
+      <div
+        class="img-box animate__animated animate__fadeIn delay-06s wow"
+      >
+        <img src="assets/images/tewa.png" alt="" />
+      </div>
+      <div class="content-left">
+        <h2
+          class="title nj-h2 animate__animated animate__fadeInDown wow"
+          >
+          Давайте знайомитись <br />я <span class="nj-greenText">теща Оля</span>
+        </h2>
+
+        <div class="accardion animate__animated animate__fadeInUp wow delay-03s" *ngFor="let item of accordionData">
+          <app-accordion [AccordionItem] = "item"></app-accordion>
+        </div>
+
+        <div class="accardion animate__animated animate__fadeInUp wow delay-06s" *ngFor="let item of accordionDataSecond">
+          <app-accordion [AccordionItem] = "item"></app-accordion>
+        </div>
+
+        <div class="accardion animate__animated animate__fadeInUp wow delay-09s" *ngFor="let item of accordionDataLast">
+          <app-accordion [AccordionItem] = "item"></app-accordion>
+         </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

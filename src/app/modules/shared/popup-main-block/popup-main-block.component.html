@@ -1,0 +1,66 @@
+<div class="popup-wrapper" [formGroup]="form">
+
+  <div class="top-title-box">
+    <h1 mat-dialog-title class="nj-h4">
+      Заповніть форму для <span class="nj-greenText">замовлення</span>
+    </h1>
+    <button
+      mat-icon-button
+      matTooltip="Warn"
+      color="warn"
+      aria-label="Example icon-button with a heart icon"
+      class="btn-cancel"
+      mat-dialog-close
+    >
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+  <!-- Other code -->
+
+  <div class="profile-box">
+    <mat-form-field appearance="outline">
+      <mat-label>Ведіть прізвище</mat-label>
+      <input class="nj-p" matInput placeholder="Українка" formControlName="surname" required />
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ведіть ім'я</mat-label>
+      <input class="nj-p" matInput placeholder="Леся" formControlName="name" required />
+      <mat-icon matSuffix>edit</mat-icon>
+
+      <mat-error *ngIf="form?.get('name')?.invalid && form?.get('name')?.touched">
+        Не вказане ім’я
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="contacts-box">
+    <mat-form-field appearance="outline">
+      <mat-label>Ведіть Ваш Телефон</mat-label>
+      <input class="nj-p" matInput placeholder="093-333-33-33" formControlName="phone" required />
+      <mat-error *ngIf="form?.get('phone')?.invalid && form?.get('phone')?.touched">
+        Не вказаний телефон
+      </mat-error>
+      <mat-icon matSuffix>phone</mat-icon>
+
+      <mat-error *ngIf="form?.get('phone')?.errors?.['mask']">Не вірно вказаний телефон</mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Напишіть Ваше питання чи комментар?</mat-label>
+    <textarea matInput formControlName="question"></textarea>
+
+    <mat-error *ngIf="form?.get('question')?.invalid && form?.get('question')?.touched">
+      Не вказане питання
+    </mat-error>
+  </mat-form-field>
+
+  <div class="mat-dialog-actions">
+    <app-main-button
+      [text]="'Надіслати'"
+      (click)="afterSubmitPopup()"
+    ></app-main-button>
+  </div>
+</div>

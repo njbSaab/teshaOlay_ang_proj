@@ -1,0 +1,9 @@
+<section class="single-menu-bloc" id="menu">
+  <div class="nj-container">
+    <h2 class="title pd-title nj-h2 nj-textCenter wow animate__animated animate__fadeInDown">Що я пропоную</h2>
+
+    <div class="item" *ngFor="let item of singleMenuBlock; let odd = odd">
+      <app-single-menu [singleMenu]="item" [isRevers]="odd"></app-single-menu>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,125 @@
+.main {
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  padding-top: 110px;
+  @media (max-width: 1024px){
+    gap: 1%;
+    padding-top: 160px;
+    @media (max-width: 790px){
+      gap: 1%;
+      flex-direction: column-reverse;
+      @media (max-width: 600px){
+        padding-top: 80px;
+      }
+    }
+  }
+
+  .nj-container-fluid{
+    height: 100%;
+  }
+
+  .title {
+    margin: 0 10px 30px 0;
+
+    @media (max-width: 1450px) {
+      font-size: 43px !important;
+      @media (max-width: 1060px) {
+        font-size: 37px !important;
+        @media (max-width: 880px) {
+          font-size: 33px !important;
+          @media (max-width: 798px) {
+            font-size: 30px !important;
+            @media (max-width: 790px){
+              width: 100%;
+              @media (max-width: 500px){
+                font-size: 28px !important;
+                @media (max-width: 375px) and (max-height: 667px){
+                  font-size: 24px !important;
+                  @media (max-width: 325px) and (max-height: 600px){
+                    font-size: 20px !important;
+                    margin: 0 10px 20px 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .text {
+    max-width: 550px;
+    padding-bottom: 40px;
+    margin: 0;
+
+    @media (max-width: 1200px) {
+      padding-bottom: 30px;
+
+      @media (max-width: 1024px) {
+        width: 94%;
+
+        @media (max-width: 790px) {
+          max-width: 100%;
+          width: 100%;
+          padding: 0 0 20px 10px;
+        }
+      }
+
+    }
+
+  }
+
+  .box{
+    flex: 0 0 100%;
+    @media (max-width: 790px){
+      flex: 0 0 40%;
+    }
+
+    .sub-box{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      height: 100%;
+
+      @media (max-width: 790px){
+        width: 100%;
+        height: fit-content;
+      }
+
+    }
+  }
+
+  .img{
+    flex: 0 0 50%;
+    transform: translate(-100%, 0);
+    position: relative;
+
+    @media (max-width: 790px){
+      flex: 1 1 50%;
+      transform: translate(0, 0);
+    }
+
+    img{
+      //padding-top: 10%;
+      position: absolute;
+      max-width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+
+      @media (max-width: 790px){
+       width: 100%;
+
+      }
+    }
+  }
+
+
+
+}

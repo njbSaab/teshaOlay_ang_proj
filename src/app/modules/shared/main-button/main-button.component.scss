@@ -1,0 +1,20 @@
+@import "../colors.scss";
+@import "../fonts.scss";
+
+.btn {
+  background: $btnBg !important;
+  border-radius: 30px;
+  padding: 17px 30px;
+  color: $btnColor !important;
+  font-family: $font-small !important;
+  line-height: 130%;
+  font-weight: bold;
+  width: 100%;
+  @media (max-width: 600px) {
+    padding: 23px 30px;
+    @media (max-width: 600px) {
+      padding: 20px 30px;
+    }
+  }
+}
+

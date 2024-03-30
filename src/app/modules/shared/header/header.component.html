@@ -1,0 +1,24 @@
+<header class="header" [class.headerGreen]="menuHeaderVariable" [class.header-none]="headerNone">
+  <a href="#main-top-block" class="header-logo">
+    <img src="assets/images/logo.svg" alt="" />
+  </a>
+
+  <div
+    class="menu-btn"
+    [class.menu-btn-Class]="menuBtnVariable"
+    (click)="openMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="header-nav" [class.menuClass]="menuVariable">
+    <a href="#profile" class="link nj-p">Про мене</a>
+    <a href="#menu" class="link nj-p">Рецепти</a>
+    <a href="#whoo" class="link nj-p">Для кого</a>
+    <div class="btn-box">
+      <app-main-button [text]="'Замовити'" (click)="openPopup()"></app-main-button>
+    </div>
+  </nav>
+</header>

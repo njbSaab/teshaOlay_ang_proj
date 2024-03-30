@@ -1,0 +1,19 @@
+<div class="social-box">
+<swiper
+    #socialSlider
+    [slidesPerView]="1"
+    [spaceBetween]="1"
+    [navigation]="true"
+    [autoplay]="true"
+    [pagination]="{ clickable: true }"
+    effect="cube"
+  >    <ng-template
+    swiperSlide
+    *ngFor="let image of whyWeCardData?.img"
+  >
+    <div class="img">
+      <img [src]="image" alt="Slide" />
+    </div>
+  </ng-template>
+  </swiper>
+</div>

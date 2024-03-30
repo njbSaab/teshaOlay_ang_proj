@@ -1,0 +1,25 @@
+<a class="link-wrapper" [href]="whyWeCardData?.link">
+<div class="items">
+  <div href="" class="link">
+          <app-social-slider [whyWeCardData]="whyWeCardData" ></app-social-slider>
+    <h4 class="nj-h3 title wow animate__animated animate__fadeInDown">
+      {{whyWeCardData?.title}}
+    </h4>
+  </div>
+  <div class="box-content">
+    <div class="top-items">
+      <div class="top-text  wow animate__animated animate__zoomIn animate__delay-1s" *ngFor="let text of whyWeCardData?.description">
+        <div class="span"></div>
+        <p class="nj-p text">{{text}}</p>
+      </div>
+    </div>
+
+    <div class="bottom-items">
+         <h3 class="bottom-number subtitel-numbers wow animate__animated animate__fadeInLeft delay-09ms">
+           {{whyWeCardData?.active?.numberOfActiveBlack}}<span>{{whyWeCardData?.active?.numberOfActiveGreen}}</span>
+         </h3>
+          <p class="bottom-text nj-h4 subtext wow animate__animated animate__fadeInDown delay-13ms">{{whyWeCardData?.active?.titleActive}}</p>
+    </div>
+  </div>
+</div>
+</a>

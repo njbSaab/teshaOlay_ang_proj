@@ -1,0 +1,76 @@
+@import "../../shared/colors.scss";
+
+.for-whom {
+  background: $background;
+  padding-bottom: 50px;
+  @media (max-width: 1024px){
+    padding-bottom: 0;
+  }
+
+  .title {
+    text-align: center;
+    padding: 50px 0 50px;
+    @media (max-width: 500px){
+      padding: 50px 0 30px;
+    }
+  }
+  .box {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1%;
+    }
+  }
+  .item {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 50px;
+      flex: 0 0 49%;
+    }
+    img {
+      max-width: 70%;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      @media (max-width: 768px) {
+        max-width: 50%;
+        margin-bottom: 15px;
+      }
+    }
+    .subtitle {
+      padding-bottom: 5px;
+      @media (max-width: 1260px) {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 18px;
+        @media (max-width: 420px) {
+          padding-bottom: 2.5px;
+          @media (max-width: 350px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .text {
+      text-align: center;
+      font-size: 15px;
+      width: 200px;
+      @media (max-width: 420px) {
+        width: 180px;
+        font-size: 12px;
+        @media (max-width: 350px) {
+          width: 140px;
+          font-size: 10px;
+        }
+      }
+
+    }
+  }
+}

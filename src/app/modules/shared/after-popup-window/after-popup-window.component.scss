@@ -1,0 +1,44 @@
+@import "../colors.scss";
+@import "../fonts.scss";
+
+h1 {
+  font-family: $font-large;
+  font-weight: bold;
+  text-align: center;
+  color: $btnColor !important;
+}
+.icon-color {
+  color: $btnBg;
+  font-size: 35px;
+  height: 35px;
+  width: 35px;
+  padding-top: 5px;
+}
+.mat-dialog-content {
+  padding: 0 20px;
+
+  @media (max-width: 600px){
+    padding: 0 20px 10px;
+  }
+
+  .text-wrapping{
+    @media (max-width: 600px){
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.mat-dialog-actions {
+  padding: 0 10px 20px;
+  text-align: center;
+}
+p {
+  color: $btnColor !important;
+  font-family: $font-small;
+  font-weight: 200 !important;
+}
+span {
+  color: $btnBg;
+  font-weight: 600 !important;
+}

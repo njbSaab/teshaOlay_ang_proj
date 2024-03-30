@@ -1,0 +1,107 @@
+.box {
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: 1024px) {
+    padding-bottom: 35px;
+    gap: 5%;
+    @media (max-width: 800px) {
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  .sub-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+      @media (max-width: 1024px) {
+        padding-top: 40px;
+        flex: 0 1 100%;
+        @media (max-width: 800px) {
+          padding-top: 10px;
+      }
+    }
+    flex: 0 0 50%;
+    .title-price{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 425px;
+      padding-bottom: 30px;
+      @media (max-width: 800px){
+        max-width: 100%;
+        padding-bottom: 30px;
+        h3,
+        p{
+          font-size: 32px;
+          padding: 0;
+        }
+        @media (max-width: 500px){
+            padding-bottom: 20px;
+          h3,
+          p{
+            font-size: 28px;
+          }
+        }
+      }
+
+      .nj-greenText{
+        padding: 13px 10px 0px!important;
+        @media (max-width: 1024px){
+          padding: 5px 10px 0px!important;
+          height: 100%;
+         }
+      }
+    }
+    .sub-title {
+      padding-right: 5px !important;
+      @media (max-width: 350px) {
+        font-size: 22px !important;
+      }
+
+    }
+    .price-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 400px;
+      @media (max-width: 600px) {
+        justify-content: space-around;
+      }
+      .number {
+        padding: 15px 10px 10px!important;
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
+      }
+    }
+    .text {
+      max-width: 410px;
+      padding-bottom: 50px;
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        padding-bottom: 30px;
+        @media (max-width: 600px) {
+        }
+      }
+    }
+  }
+
+
+  .img{
+    width: 100%;
+  }
+}
+.flex-reverse {
+  flex-direction: row;
+  padding-left: 15%;
+
+  @media (max-width: 1024px){
+    padding-left: 0;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+}

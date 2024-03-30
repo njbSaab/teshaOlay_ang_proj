@@ -1,0 +1,13 @@
+<section class="why-we">
+  <div class="nj-container">
+    <h2 class="nj-h2 pd-title main-title wow animate__animated animate__fadeInDown">Мій кулінарний блог</h2>
+
+    <div class="wrapper-items">
+      <div class="box" *ngFor="let card of whyWeBlock">
+        <app-why-we-card [whyWeCardData]="card"></app-why-we-card>
+      </div>
+    </div>
+
+
+  </div>
+</section>
